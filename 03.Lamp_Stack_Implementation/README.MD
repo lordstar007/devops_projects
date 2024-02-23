@@ -24,16 +24,16 @@ sudo apt install apache2
 ```
 systemctl status apache2
 ```
-![apache Status screenshot](images/check_apache_status.png)
+![apache Status screenshot](images/check_apache_status.jpg)
 
 For Apache to serve web pages through the browser, the EC2 instance must be able to accept incoming requests through port 80 which is the default port for HTTP traffic. This can be done by updating the inbound rules of the EC2 instance. Inbound rules can be found under security group
-![Alt](images/inbound_rules.png)
+![Alt](images/inbound_rules.jpg)
 
 
 To view  the apache homepage, enter go to the public IP adrress in the browser over http
 
 http://<public_ip_addres>
-![Alt](images/default_page.png)
+![Alt](images/default_page.jpg)
 
 
 ## Install MySQL and Setup MySQL
@@ -66,7 +66,7 @@ This command does the following:
 - Remove test database 
 - Remove test database
 
-![](images/mysql_secure_installation.png)
+![](images/mysql_secure_installation.jpg)
 
 ## Install PHP
 Install php alongside php-mysql (php extension that enables php to commnicate with MySQL databases) and libapache2-mod-php (Appache module that enables Apache to process PHP scripts)
@@ -78,7 +78,7 @@ To confirm that php is installed run the command below to check for php version
 ```
 php -v
 ```
-![](images/php-version.png)
+![](images/php-version.jpg)
 
 ## Configuring a virtual host
 A virtual host allows for the hosting of more than one domain on a single Apache web server. We'll be setting up the domain "projectlamp"
@@ -130,7 +130,7 @@ sudo apache2ctl configtest
 sudo systemctl reload apache2
 ```
 9. Visit the website the domain name or ip address
-![](images/live-website.png)
+![](images/live-website.jpg)
 
 ## Configure .php file to take precedence over.html file
 By default, if an index.html and an index.php exists in the default directory. The index.html will be displayed over the index.php. To modify the order, take the following steps:
@@ -156,4 +156,4 @@ sudo systemctl reload apache2
 ```
 sudo echo '<?php phpinfo() ?>' > index.php
 ```
-![](images/phpinfo.png)
+![](images/phpinfo.jpg)
