@@ -48,7 +48,7 @@ sudo mysql
 ```
 3. Set a password for root user
 ```
-mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH 'chosen_password'
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'chosen_password'
 ```
 4. Exit MySQL serve
 ```
